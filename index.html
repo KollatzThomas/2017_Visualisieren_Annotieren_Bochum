@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Visualisieren, Annotieren</title>
+
+        <!-- meta information -->
+        <meta name="author" content="Thomas Kollatz" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1024" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <!-- favicons -->
+        <link rel="shortcut icon" href="resources/img/favicon.png" />
+        <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+
+        <!-- CSS reset and grid -->
+        <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
+        <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
+
+        <!-- fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext"
+            rel="stylesheet" type="text/css" />
+
+        <!-- styles for included libraries -->
+
+        <!-- chartist -->
+        <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" />
+
+        <!-- unite gallery -->
+        <link rel="stylesheet" href="vendor/unitegallery/css/unite-gallery.css" type="text/css" />
+
+        <!-- codemirror -->
+        <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
+
+        <!-- highlight -->
+        <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+        <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
+
+        <!-- swiper -->
+        <link rel="stylesheet" href="vendor/swiper/swiper.min.css" />
+
+        <!-- magnific popup -->
+        <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+
+        <!-- standard presentation styles -->
+        <link href="resources/css/style.css" rel="stylesheet" />
+
+        <!-- custom presentation styles -->
+        <link href="resources/css/custom.css" rel="stylesheet" />
+
+        <!-- js needed in head -->
+
+        <!-- greuler -->
+        <script src="vendor/d3/d3-3.5.6.js"></script>
+        <script src="vendor/cola/cola.v3.min.js"></script>
+        <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+
+        <!-- html5 dataset shim for IE -->
+        <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <div class="fallback-message">
+            <p> Your browser <strong>doesn't support the features required</strong> by
+                impress.mod.js, so you are presented with a simplified version of this presentation. </p>
+            <p> For the best experience please use the latest <strong>Chrome</strong>,
+                    <strong>Safari</strong> or <strong>Firefox</strong> browser. </p>
+        </div>
+        <div id="impress">
+            <div class="step">
+                <h4 class="down-25"><strong>07.06.2017 | DGAVL Bochum</strong></h4>
+                <h4 class="up-25"><strong><a href="http://www.dhd2017.ch">workshop | Digital
+                            Humanities in der Literaturwissenschaft – Anwendungsbeispiele, Methoden,
+                            Best Practice
+                            <!-- "Annotieren und
+                            Publizieren mit DARIAH-DE und TextGrid" -->
+                        </a></strong></h4>
+                <h1>Visualisieren, Annotieren</h1>
+                <h2 class="red up-25" style="font-size: 42px;">DARIAH webservices</h2>
+                <h4>
+                    <strong>Slides:</strong>
+                    <a href="https://kollatzthomas.github.io/2017_Visualisieren_Annotieren_Bochum/"
+                        title="View the presentation online"> https://kollatzthomas.github.io/ </a>
+                </h4>
+                <h5>
+                    <strong><a href="http://orcid.org/0000-0003-1904-1841">Thomas Kollatz, Essen |
+                            Mainz</a></strong> | <img src="resources/img/Twitter_bird_logo_2012.svg"
+                        alt="Twitter" class="twitter-icon" />
+                    <a href="https://twitter.com/kol_t" title="Thomas Kollatz on Twitter">@kol_t</a>
+                    | <img src="resources/img/Octicons-mark-github.svg" alt="Twitter"
+                        class="gh-icon" />
+                    <a href="https://github.com/KollatzThomas" title="Thomas Kollatz on GitHub"
+                        >ThomasKollatz</a> | <a href="https://creativecommons.org/licenses/by/4.0/"
+                        >CC-BY 4.0</a>
+                </h5>
+            </div>
+            <div class="step">
+                <h2>Visualisieren, Annotieren</h2>
+                <ol class="line-height-one-five">
+                    <li> DARIAH-DE Geo-Browser </li>
+                    <li> DARIAH-DE Datasheet-Editor </li>
+                    <li> DARIAH-DE Annotation Service</li>
+
+                </ol>
+            </div>
+            <div class="step">
+                <h1 class="red">01</h1>
+                <h2 class="line-height-one-five"> Geo-Browser </h2>
+            </div>
+            <div class="step">
+                <div>
+                    <h1 class="red">Geo-Browser</h1>
+                    <h2>Ein Werkzeug zur Visualisierung von Raum-Zeit Relationen</h2>
+                    <div class="centered">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml">
+                            <img src="resources/img/geobrowser_full.png"
+                                style="height:50rem; width:50rem;"
+                                data-image="resources/img/geobrowser_full.png"
+                                data-description="Screenshot by Thomas Kollatz, CC-BY 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+                             /></a>
+                        <p class="x-small">Quelle: <a
+                                href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                                >https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml</a></p>
+                    </div>
+                </div>
+                <!-- <a
+                    href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml">
+                    <img alt="Visualisierung" src="resources/img/geobrowser_full.png"
+                        data-image="resources/img/geobrowser_full.png"
+                        data-description="Screenshot by Thomas Kollatz, CC-BY 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+                        style="display:none" />
+                </a>
+                
+                    <img src="resources/img/geobrowser_full.png"/>
+                -->
+            </div>
+            <div class="step">
+                <h2 class="red">Geo-Browser</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                                ><img class="outline" style="width: 49rem"
+                                src="resources/img/geobrowser_full.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Komponenten</h3>
+                        <ul class="line-height-one-five">
+                            <li>Karte</li>
+                            <li>Zeitleiste</li>
+                            <li>Dokumentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Geo-Browser</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                                ><img class="outline" style="width: 49rem"
+                                src="resources/img/geobrowser_karte.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Karten</h3>
+                        <ul class="line-height-one-five">
+                            <li>quantitative Akkumulation</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Geo-Browser</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                                ><img class="outline" style="width: 49rem"
+                                src="resources/img/einzoomen.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Einzoomen</h3>
+                        <ul class="line-height-one-five">
+                            <li>Detailansicht</li>
+                            <li>Close | Distant View</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Geo-Browser</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                                ><img class="outline" style="width: 49rem"
+                                src="resources/img/historischekarten.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>historische Karten</h3><ul>
+                            <li>Auswahl aus diversen Karten<ul>
+                                    <li>topographisch</li>
+                                    <li>historisch</li>
+                                </ul></li>
+                        </ul>
+                        <!-- <ul class="line-height-one-five">
+                            <li>Detailansicht</li>
+                            <li>Close | Distant View</li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Geo-Browser</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                                ><img class="outline" style="width: 49rem;"
+                                src="resources/img/historischegrenzen.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>historische Grenzen</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Geo-Browser</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                                ><img class="outline" style="width: 49rem;"
+                                src="resources/img/korrelation.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Korrelation</h3>
+                        <ul>
+                            <li>Karte</li>
+                            <li>Zeitleiste</li>
+                            <li>Dokumentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Geo-Browser</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                                ><img class="outline" style="width: 29rem;"
+                                src="resources/img/korrelation2.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Korrelation</h3>
+                        <ul>
+                            <li>Karte</li>
+                            <li>Zeitleiste</li>
+                            <li>Dokumentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Geo-Browser</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                                ><img class="outline" style="width: 49rem;"
+                                src="resources/img/datendoku.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Dokumentation</h3>
+                        <ul>
+                            <li>ausführliche Dokumentation im Datenteil</li>
+                            <li>"Fussnoten" zu <em>Karte</em> und <em>Zeitleiste</em></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Geo-Browser</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                                ><img class="outline" style="width: 49rem;"
+                                src="resources/img/suche.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Suche</h3>
+                        <ul>
+                            <li>Suche in Dokumentation<ul>
+                                    <li>korreliert mit Karte</li>
+                                    <li>korreliert mit Zeitleiste</li>
+                                </ul></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Geo-Browser</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                                ><img class="outline" style="width: 49rem;"
+                                src="resources/img/subset.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Subset – neuer Datensatz</h3>
+                        <ul>
+                            <li>aus Kartenansicht</li>
+                            <li>aus Zeitraum</li>
+                            <li>aus Suchergebnis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Geo-Browser</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                                ><img class="outline" style="width: 49rem;"
+                                src="resources/img/export.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Export</h3>
+                        <ul><li>externe Weiterverarbeitung</li>
+                        <li><em>tool</em>unabhängige Nachnutzung</li></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Geo-Browser</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                                ><img class="outline" style="width: 49rem;"
+                                src="resources/img/kombination.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Kombination</h3>
+                        <ul>
+                            <li>Mehrere Datensets in der Zusammenschau<ul>
+                                    <li>Zuschalten</li>
+                                    <li>Abschalten</li>
+                                </ul></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="step">
+                <h2 class="red">Geo-Browser</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                                ><img class="outline" style="width: 29rem;"
+                                src="resources/img/embedded_bsp.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Geobrowser – embedded</h3>
+                        <ul>
+                            <li>Einbindung in eigene Webseiten</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Geo-Browser</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml"
+                            ><img class="outline" style="width: 49rem;"
+                                src="resources/img/kml.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Formate</h3>
+                        <ul>
+                            <li>kml – Keyhole Markup Language</li>
+                            <li>CSV – Comma Separated Values</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h1 class="red">02</h1>
+                <h2 class="line-height-one-five"> Datasheet-Editor </h2>
+            </div>
+            <div class="step">
+                <div>
+                    <h1 class="red">Datasheet-Editor</h1>
+                    <h2>Ein Werkzeug zum Erstellen raum-zeitlicher Daten</h2>
+                    <div class="centered">
+                        <a
+                            href="https://geobrowser.de.dariah.eu/embed/?kml1=http://steinheim-institut.de/daten/symbols.kml">
+                            <img src="resources/img/datasheet_full.png"
+                                style="height:50rem; width:50rem;"
+                                data-image="resources/img/datasheet_full.png"
+                                data-description="Screenshot by Thomas Kollatz, CC-BY 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+                             /></a>
+                        <p class="x-small">Quelle: <a href="https://geobrowser.de.dariah.eu/edit/"
+                                >https://geobrowser.de.dariah.eu/edit</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Datasheet-Editor</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a href="https://geobrowser.de.dariah.eu/edit/"><img class="outline"
+                                style="width: 49rem;" src="resources/img/datasheet_full.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Datasheet-Editor</h3>
+                        <ul>
+                            <li>Eingabe raumzeitlicher Daten</li>
+                            <li>Datenerhebung und -pflege von Anfang an im DARIAH-DE Storage</li>
+                            <li>Datenanreicherung durch Getty Thesaurus of Geographical Names (TGN)<ul>
+                                    <li>Zuweisung der TGN-ID</li>
+                                    <li>Zuweisung der Geokoordinaten</li>
+                                </ul></li>
+                            <li>Visualisierung im Geo-Browser</li>
+                            <li>semiautomatische Datenprüfung / -korrektur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <h2 class="red">Datasheet-Editor</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a href="https://geobrowser.de.dariah.eu/edit/"><img class="outline"
+                            style="width: 49rem;" src="resources/img/create.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Anlegen eines Datensatzes</h3>
+                        <ul><li>Upload</li>
+                        <li>Erstellen im Editor (online)</li></ul>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Datasheet-Editor</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a href="https://geobrowser.de.dariah.eu/edit/"><img class="outline"
+                            style="width: 49rem;" src="resources/img/id.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Unique ID</h3>
+                        <ul><li>Referenzierung über numerischen Idendifikator (ID)</li></ul>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Datasheet-Editor</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a href="https://geobrowser.de.dariah.eu/edit/"><img class="outline"
+                            style="width: 49rem;" src="resources/img/storage.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Storage</h3>
+                        <ul><li>Format: csv</li>
+                        <li>ID</li></ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <h2 class="red">Datasheet-Editor</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a href="https://geobrowser.de.dariah.eu/edit/"><img class="outline"
+                            style="width: 49rem;" src="resources/img/form.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Formular</h3>
+                        <ul><li>Dateneingabe</li>
+                        <li>Datenanreicherung</li>
+                        <li>Datenkorrektur</li></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Datasheet-Editor</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a href="https://geobrowser.de.dariah.eu/edit/"><img class="outline"
+                            style="width: 49rem;" src="resources/img/geo.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Datenanreicherung</h3>
+                        <ul><li>Thesaurus of Geographical Names<ul><li>Zuweisung der TGN-ID</li>
+                            <li>Zuweisung der Geokoordinaten</li></ul></li></ul>                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Datasheet-Editor</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a href="https://geobrowser.de.dariah.eu/edit/"><img class="outline"
+                            style="width: 49rem;" src="resources/img/enrichment2.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Datenanreicherung</h3>
+                        <ul><li>semiautomatisch</li>
+                        <li>Vorschlag wird ins Formular eingetragen</li></ul>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <h2 class="red">Datasheet-Editor</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a href="https://geobrowser.de.dariah.eu/edit/"><img class="outline"
+                            style="width: 49rem;" src="resources/img/open.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Überprüfen</h3>
+                        <ul><li>Anbindung an Geo-Browser</li></ul>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Datasheet-Editor</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a href="https://geobrowser.de.dariah.eu/edit/"><img class="outline"
+                            style="width: 49rem;" src="resources/img/see.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Überprüfen</h3>
+                        <ul><li>kartenbasierte Kontrolle</li></ul>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Datasheet-Editor</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a href="https://geobrowser.de.dariah.eu/edit/"><img class="outline"
+                            style="width: 39rem;" src="resources/img/select.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Überarbeiten</h3>
+                        <ul>
+                            <li>Korrektur über Auswahlmenu</li>
+                                          </ul>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Datasheet-Editor</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a href="https://geobrowser.de.dariah.eu/edit/"><img class="outline"
+                            style="width: 49rem;" src="resources/img/correct.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Überarbeiten</h3>
+                        <ul><li>Korrektur über Karten</li>
+                            <li>Auswahlmenü bietet Vorschläge aus TGN</li>
+                        <li>Korrektur über Geodienste (geonames | OSM)</li></ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <h2 class="red">Datasheet-Editor</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <a href="https://geobrowser.de.dariah.eu/edit/"><img class="outline"
+                            style="width: 39rem;" src="resources/img/individual.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <h3>Überarbeiten</h3>
+                        <ul><li>freie Auswahl</li></ul>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h1 class="red">03</h1>
+                <h2 class="line-height-one-five"> Annotation Service </h2>
+            </div>
+            <div class="step">
+                <div class="centered">
+                    <h1 class="red">Annotationsdienst</h1>
+                    <h2 class="line-height-one-five"> _beta_ </h2>
+                    <blockquote><a href="https://annotation.de.dariah.eu"
+                            >https://annotation.de.dariah.eu</a></blockquote>
+                </div>
+                <div class="down-50">
+                    <p class="centered">Der DARIAH-DE Annotationsdienst ermöglicht</p>
+                    <ul>
+                        <li>Text- und Bildannotationen im TextGrid Repositorium.</li>
+                        <li>Beliebige Webseiten können über den DARIAH-DE Annotationsdienst
+                            annotiert werden. </li>
+                        <li>Der DARIAH-DE Annotationsdienst kann in eigene Webseiten eingebettet
+                            werden.</li>
+                        <li>Der DARIAH-DE Annotationsdienst ermöglicht die Verwaltung und
+                            Organisation der Annotationen (individuell und|oder gruppenbezogen) im
+                            Annotation-Manager</li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- 
+            <div class="step">
+                <h2>Annotation Sandbox</h2>
+                <h4 class="red up-25">Optionen</h4>
+                <div id="researchdata" style="display:none;">
+                    <a
+                        href="https://annotation.de.dariah.eu/textgridrep/browse.html?id=textgrid:vqn0.0">
+                        <img alt="Textannotation" src="resources/img/textannotation.png"
+                            data-image="resources/img/textannotation_big.png"
+                            data-description="Screenshot by Thomas Kollatz, CC-BY 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+                            style="display:none" />
+                    </a>
+                    <a
+                        href="https://annotation.de.dariah.eu/textgridrep/browse.html?id=textgrid:vqn0.0">
+                        <img alt="Bildannotation" src="resources/img/bildannotation.png"
+                            data-image="resources/img/bildannotation_big.png"
+                            data-description="Screenshot by Thomas Kollatz, CC-BY 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+                            style="display:none" />
+                    </a>
+                    <a
+                        href="https://annotation.de.dariah.eu/via/https://de.dariah.eu/annotieren-und-publizieren-mit-textgrid-und-dariah-de">
+                        <img alt="Annotation einer Webseite" src="resources/img/via.png"
+                            data-image="resources/img/via_big.png"
+                            data-description="Screenshot by Thomas Kollatz, CC-BY 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+                            style="display:none" />
+                    </a>
+                    <a href="http://www.steinheim-institut.de/cgi-bin/epidat?id=hha">
+                        <img alt="embedded" src="resources/img/embedded.png"
+                            data-image="resources/img/embedded_big.png"
+                            data-description="Screenshot by Thomas Kollatz, CC-BY 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+                            style="display:none" />
+                    </a>
+                    <a href="https://annotation.de.dariah.eu/AnnotationViewer/">
+                        <img alt="Annotation Viewer" src="resources/img/annotationViewer.png"
+                            data-image="resources/img/annotationViewer_big.png"
+                            data-description="Screenshot by Thomas Kollatz, CC-BY 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+                            style="display:none" />
+                    </a>
+                </div>
+            </div>
+            -->
+            <div class="step">
+                <h2>Annotation Sandbox</h2>
+                <h4 class="red up-25">Optionen</h4>
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-hash="/step-35/substep-1">
+                            <div class="six columns first">
+                                <a href="https://annotation.de.dariah.eu/" title="Login">
+                                    <img class="pull-up" src="resources/img/login_big.png"
+                                        style="width:100%" />
+                                </a>
+                                <p class="centered pull-up"> Website: <a
+                                        href="https://annotation.de.dariah.eu/"
+                                        >https://annotation.de.dariah.eu/</a>
+                                </p>
+                            </div>
+                            <div class="six columns last">
+                                <h5><strong>Annotation Login</strong></h5>
+                                <ul class="even-left medium">
+                                    <li> Login mit DARIAH Account </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-hash="/step-35/substep-2">
+                            <div class="six columns first">
+                                <a
+                                    href="https://annotation.de.dariah.eu/textgridrep/browse.html?id=textgrid:vqn0.0"
+                                    title="Textannotation">
+                                    <img class="pull-up" src="resources/img/textannotation_big.png"
+                                        style="width:100%" />
+                                </a>
+                                <p class="centered pull-up"> Website: <a
+                                        href="https://annotation.de.dariah.eu/textgridrep/browse.html?id=textgrid:vqn0.0"
+                                        >https://annotation.de.dariah.eu/textgridrep/browse.html?id=textgrid:vqn0.0</a>
+                                </p>
+                            </div>
+                            <div class="six columns last">
+                                <h5><strong>Textannotation</strong></h5>
+                                <ul class="even-left medium">
+                                    <li> Anmelden mit DARIAH Account </li>
+                                    <li> Annotieren der TGRep Texte </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-hash="/step-35/substep-3">
+                            <div class="six columns first">
+                                <a
+                                    href="https://annotation.de.dariah.eu/textgridrep/browse.html?id=textgrid:vqn0.0"
+                                    title="Bildannotation">
+                                    <img class="pull-up" src="resources/img/bildannotation_big.png"
+                                        style="width:100%" />
+                                </a>
+                                <p class="centered pull-up"> Website: <a
+                                        href="https://annotation.de.dariah.eu/textgridrep/browse.html?id=textgrid:vqn0.0"
+                                        >https://annotation.de.dariah.eu/textgridrep/browse.html?id=textgrid:vqn0.0</a>
+                                </p>
+                            </div>
+                            <div class="six columns last">
+                                <h5><strong>Bildannotation</strong></h5>
+                                <ul class="even-left medium">
+                                    <li> Anmelden mit DARIAH Account </li>
+                                    <li> Annotation der TGRep Bilddateien </li>
+                                    <li> Annotationsspalte in DigiLib </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-hash="/step-35/substep-4">
+                            <div class="six columns first">
+                                <a href="https://annotation.de.dariah.eu/"
+                                    title="Annotation beliebiger Webseiten">
+                                    <img class="pull-up" src="resources/img/via_big.png"
+                                        style="width:100%" />
+                                </a>
+                                <p class="centered pull-up"> Website: <a
+                                        href="https://annotation.de.dariah.eu"
+                                        >https://annotation.de.dariah.eu/</a>
+                                </p>
+                            </div>
+                            <div class="six columns last">
+                                <h5><strong>Annotation beliebiger Webseiten</strong></h5>
+                                <ul class="even-left medium">
+                                    <li> Anmelden mit DARIAH Account </li>
+                                    <li> Webinhalte mit DARIAH Annotation Service annotieren </li>
+                                    <li> https://annotation.de.dariah.eu/via/ </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-hash="/step-35/substep-5">
+                            <div class="six columns first">
+                                <a href="http://www.steinheim-institut.de/cgi-bin/epidat?id=hha"
+                                    title="Annotationservice embedded">
+                                    <img class="pull-up" src="resources/img/embedded_big.png"
+                                        style="width:100%" />
+                                </a>
+                                <p class="centered pull-up"> Website: <a
+                                        href="http://www.steinheim-institut.de/cgi-bin/epidat?id=hha"
+                                        >http://www.steinheim-institut.de/cgi-bin/epidat?id=hha</a>
+                                </p>
+                            </div>
+                            <div class="six columns last">
+                                <h5><strong>Annotationsservice einbetten</strong></h5>
+                                <ul class="even-left medium">
+                                    <li> Anmelden mit DARIAH Account </li>
+                                    <li> Script eingebaut in eigene Webangebote ermöglicht, die
+                                        betreffende Seite zu annotieren</li>
+                                    <li> Code, siehe: <a href="https://annotation.de.dariah.eu"
+                                            >https://annotation.de.dariah.eu</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-hash="/step-35/substep-6">
+                            <div class="six columns first">
+                                <a href="https://annotation.de.dariah.eu/AnnotationViewer/"
+                                    title="AnnotationViewer">
+                                    <img class="pull-up"
+                                        src="resources/img/annotationViewer_big.png"
+                                        style="width:100%" />
+                                </a>
+                                <p class="centered pull-up"> Website: <a
+                                        href="https://annotation.de.dariah.eu/AnnotationViewer/"
+                                        >https://annotation.de.dariah.eu/AnnotationViewer/</a>
+                                </p>
+                            </div>
+                            <div class="six columns last">
+                                <h5><strong>Annotation Viewer</strong></h5>
+                                <ul class="even-left medium">
+                                    <li> Anmelden mit DARIAH Account </li>
+                                    <li> Verwaltung der Annotationen </li>
+                                    <li> Suche in Annotationen </li>
+                                    <li> Annotationsgruppen anlegen </li>
+                                    <li> Annotationen exportieren<ul>
+                                            <li>CSV</li>
+                                            <li>TextGridLab</li>
+                                        </ul></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+            <div class="step">
+                <h2>Literatur, Webservice und Slides</h2>
+                <h4>Dokumentation</h4>
+                <ul class="small">
+                    <li>
+                        <a href="https://de.dariah.eu/geobrowser">Geo-Browser</a></li>
+                    <li>
+                        <a href="https://de.dariah.eu/datasheet-editor">Datasheet Editor</a></li>
+                    <li>
+                        <a href="https://wiki.de.dariah.eu/x/Sg8CAg">Annotation – Spezifikation von
+                            Diensten</a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://wiki.de.dariah.eu/download/attachments/14651583/r621_2.pdf?version=1&amp;modificationDate=1456778509100&amp;api=v2"
+                            >Digitale Annotationen: ‘Best Practices’ und Potentiale II</a>
+                        [PDF]</li>
+                </ul>
+                <h4>Webservices</h4>
+                <ul class="small">
+                    <li><a href="https://geobrowser.de.dariah.eu/">Geo-Browser</a></li>
+                    <li><a href="https://geobrowser.de.dariah.eu/edit/index.html">Datasheet
+                            Editor</a></li>
+                    <li><a href="https://annotation.de.dariah.eu">Annotation Service</a></li>
+                </ul>
+                <h4>Software</h4>
+                <ul class="small">
+                    <li>
+                        <a href="https://github.com/impress/impress.js">Impress.js</a>
+                        (Präsentation) </li>
+                </ul>
+                <h4>Download</h4>
+                <ul class="small">
+                    <li>
+                        <a href="https://github.com/kollatzthomas">
+                            https://kollatzthomas.github.io/2017_Visualisieren_Annotieren_Bochum/
+                        </a>
+                    </li>
+                    <li> Alle Inhalte, Illustrationen und Bilder sind frei zur Weiterverwendung und
+                        Modifikation.<br /> Lizenz: <a
+                            href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>, <a
+                            href="http://orcid.org/0000-0003-1904-1841">Thomas Kollatz</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- jquery -->
+        <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+        <!-- unite gallery -->
+        <script type="text/javascript" src="vendor/unitegallery/js/unitegallery.min.js"></script>
+        <script type="text/javascript" src="vendor/unitegallery/themes/tiles/ug-theme-tiles.js"></script>
+        <script type="text/javascript" src="resources/js/unite.gallery.js"></script>
+        <!-- chartist -->
+        <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
+        <script src="resources/js/chartist.charts.js"></script>
+        <!-- codemirror -->
+        <script src="vendor/codemirror/lib/codemirror.js"></script>
+        <script src="vendor/codemirror/addon/edit/matchbrackets.js"></script>
+        <script src="vendor/codemirror/mode/sparql/sparql.js"></script>
+        <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+        <!-- highlight -->
+        <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="resources/js/hljs.linenumbering.js"></script>
+        <!-- swiper -->
+        <script src="vendor/swiper/swiper.min.js"></script>
+        <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 30,
+            hashnav: true
+        });
+    </script>
+        <!-- magnific popup -->
+        <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
+        <script src="resources/js/magnific-popup.lightbox.js"></script>
+        <!-- impress.mod.js -->
+        <script src="vendor/impress/impress.fork.js"></script>
+        <script src="vendor/impress/impress-slidenum.js"></script>
+        <script>
+        var obj = impress();
+        obj.init();
+        initSlideNo(obj);
+    </script>
+    </body>
+</html>
